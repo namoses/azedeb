@@ -1,0 +1,184 @@
+<html>
+    <head>
+      <style type="text/css">
+<!--
+.bgclr {background-color: white; color: black; font-weight: bold;}
+-->
+</style>
+    	<meta charset="utf-8">
+    	<title>Temperament App</title>
+        <link rel="stylesheet" href="css/stylesheet.css"  type='text/css'/>
+               <script src="javascript/jquery-1.11.1.min.js"></script>
+                  <script src="javascript/script.js" ></script>
+                  <script language="JavaScript">
+
+<!-- Begin
+// Insert number of questions
+var numQues = 5;
+
+// Insert number of choices in each question
+var numChoi = 4;
+
+// Insert number of questions displayed in answer area
+var answers = new Array(5);
+
+// Insert answers to questions
+answers[0] = "...Either find one person and converse (telling all of your ambitions, achievements) or organize a big game for all to play.";
+answers[1] = "...Do it. Who cares?";
+answers[2] = "Your favorite (you got all of your friends into it.)";
+answers[3] = "You get whatever your date gets.";
+answers[4] = "Your closest friends, out to a coffee shop, then to a spa."
+// Do not change anything below here ...
+function getScore(form) {
+var score = 0;
+var currElt;
+var currSelection;
+for (i=0; i<numQues; i++) {
+currElt = i*numChoi;
+for (j=0; j<numChoi; j++) {
+currSelection = form.elements[currElt + j];
+if (currSelection.checked) {
+if (currSelection.value == answers[i]) {
+  score++;
+  break;
+}
+}
+}
+}
+score = Math.round(score/numQues*100);
+form.percentage.value = score + "%";
+var correctAnswers = "";
+for (i=1; i<=numQues; i++) {
+correctAnswers += i + ". " + answers[i-1] + "\r\n";
+}
+if (score == "100"){
+form.solutions.value = "You are a CHOLERIC";
+}
+else if
+  (score == "80")
+  {form.solutions.value = "You are a MELANCHOLIC";
+
+}else if
+  (score == "60"){
+  form.solutions.value = "You are a PHLEGMATIC";
+}
+else if 
+  (score == "40"){
+  form.solutions.value = "You are a SANGUINE";
+}
+else {
+  form.solutions.value = "Your Score is too low";
+}
+}
+//  End -->
+</script>
+	</head>
+	<body background="pictures/angel.jpg">
+	 <div class="logo"><a href="test again.html" style="text-decoration:none; color:#ffffff">i<span>tot!</span>
+  </a></div>
+</div>
+<div id="tabbed_box_1" class="tabbed_box">
+    <h4>Assess Yourself<small>By Selecting a Tab</small></h4>
+    <div class="tabbed_area">
+<ul class="tabs">
+    <li><a href="javascript:tabSwitch_2(1, 6, 'tab_', 'content_');" id="tab_1" class="active"><strong>START</strong></a></li>
+    <li><a href="javascript:tabSwitch_2(2, 6, 'tab_', 'content_');" id="tab_2"><strong>NEXT</strong></a></li>
+    <li><a href="javascript:tabSwitch_2(3, 6, 'tab_', 'content_');" id="tab_3"><strong>NEXT</strong></a></li>
+    <li><a href="javascript:tabSwitch_2(4, 6, 'tab_', 'content_');" id="tab_4"><strong>NEXT</strong></a></li>
+    <li><a href="javascript:tabSwitch_2(5, 6, 'tab_', 'content_');" id="tab_5"><strong>NEXT</strong></a></li> 
+    <li><a href="javascript:tabSwitch_2(6, 6, 'tab_', 'content_');" id="tab_6"><strong>FINISH</strong></a></li> 
+</ul>
+<form name="quiz">
+        <div id="content_1" class="content">
+
+            <ul>
+                <li>Question 1:   You walk into a party full of people. You usually...</li>
+                <table style="max-width:600px;" align:"center" cellspacing="20px" align-top: "10px">                  
+     <tr>
+	
+	<li class="question1"><input type="radio" name="q1" value="...Find people you know well and who share your interests." /><em>...Find people you know well and who share your interests.</em></li>
+	<li class="question1"><input type="radio" name="q1" value="...Either find one person and converse (telling all of your ambitions, achievements) or organize a big game for all to play." /><em>...Either find one person and converse (telling all of your ambitions, achievements) or organize a big game for all to play.</em></li>
+	<li class="question1"><input type="radio" name="q1" value="...Go and wait for others to come to you." /><em>...Go and wait for others to come to you.</em></li>
+	<li class="question1"><input type="radio" name="q1" value="...Find the largest group of people & become the center of the conversation." /><em>...Find the largest group of people & become the center of the conversation.</em></li>
+	</tr>
+	</table>
+            </ul>
+        </div>
+        <div id="content_2" class="content">
+            <ul>
+            	<li>Question 2:   You are faced with a Truth-or-Dare question that you REALLY don't want to get. You...</li>
+           <table style="max-width:600px;" align:"center"  cellspacing="20px" align-top: "10px"> 
+       <tr>
+	<li class="question1"><input type="radio" name="q2" value="...Do it. Who cares?" /><em>...Do it. Who cares?</em></li>
+	<li class="question1"><input type="radio" name="q2" value="...Do the dare anyways. Your friends' opinions of you mean more than your dignity." /><em>...Do the dare anyways. Your friends' opinions of you mean more than your dignity.</em></li>
+	<li class="question1"><input type="radio" name="q2" value="...Protest to the question. Why shouldn't you just get another one?" /><em>...Protest to the question. Why shouldn't you just get another one?</em></li>
+	<li class="question1"><input type="radio" name="q2" value="...Can't decide, so they skip you." /><em>...Can't decide, so they skip you.</em></li>
+	</tr>
+	</table>
+            </ul>
+        </div>
+        <div id="content_3" class="content">
+            <ul>
+            	<li>Question 3:   Which movie would interest you the most?</li>
+    <table style="max-width:600px;" align="center" cellspacing="20px" align-top: "10px"> 
+     <tr>
+	<li class="question1"><input type="radio" name="q3" value="Your favorite (you got all of your friends into it.)" /><em>Your favorite (you got all of your friends into it.)</em></li>
+	<li class="question1"><input type="radio" name="q3" value="That small-time indy flick with the amazing actors." /><em>That small-time indy flick with the amazing actors.</em></li>
+	<li class="question1"><input type="radio" name="q3" value="The latest box-office smash" /><em>The latest box-office smash</em></li>
+	<li class="question1"><input type="radio" name="q3" value="Whatever you feel like at the time." /><em>Whatever you feel like at the time.</em></li>
+	</tr>
+	</table>
+            </ul>
+        </div>
+      <div id="content_4" class="content">
+            <ul>
+            	<li>Question 4:   On a date, how would the ordering go?</li>
+            	<table style="max-width:600px;" align="center" cellspacing="20px" align-top: "10px">                  
+   <tr>
+	<li class="question1"><input type="radio" name="q4" value="You get whatever sounds good at the time." /><em>You get whatever sounds good at the time.</em></li>
+	<li class="question1"><input type="radio" name="q4" value="You get whatever your date gets." /><em>You get whatever your date gets.</em></li>
+	<li class="question1"><input type="radio" name="q4" value="You get what you've never tried." /><em>You get what you've never tried.</em></li>
+	<li class="question1"><input type="radio" name="q4" value="You help your date decide what to get.." /><em>You help your date decide what to get..</em></li>
+	</tr>
+	</table>
+	
+</ul>
+	 
+        </div>
+         <div id="content_5" class="content">
+
+            <ul>
+	
+            	<li>Question 5:   Happy birthday! Your ideal party is...</li>
+     <table style="max-width:600px;" align="center" cellspacing="20px" align-top: "10px">       	
+     <tr> 
+	<li class="question1"><input type="radio" name="q5" value="A surprise party" /><em>A surprise party</em></li>
+	<li class="question1"><input type="radio" name="q5" value="Anything fun, as long as you get to plan it." /><em>Anything fun, as long as you get to plan it.</em></li>
+	<li class="question1"><input type="radio" name="q5" value="A pool, beach, or dance party: Lots of people, loud music, etc." /><em>A pool, beach, or dance party: Lots of people, loud music, etc.</em></li>
+	<li class="question1"><input type="radio" name="q5" value="Your closest friends, out to a coffee shop, then to a spa." /><em>Your closest friends, out to a coffee shop, then to a spa.</em></li>
+	
+	</tr>
+	</table>
+
+           </ul>
+        </div>
+        <div id="content_6" class="content">
+            <ul>
+            	<li>Result</li>
+                     <li><tr>
+<input type="button" value="Check" onClick="getScore(this.form)"/>
+<input type="reset" value="Clear answers"/>
+<p> Score = <strong><input class="bgclr" type="text" size="6" name="percentage"  
+disabled="disabled"/></strong><br/><br/>
+Correct answers:<br/>
+<textarea class="bgclr" name="solutions" wrap="virtual" rows="6" cols="60"    
+disabled="disabled">
+</textarea>
+</tr></li>
+	</ul>
+    </div>
+</div>
+		</div>
+  </form>
+			</body>
+</html>
